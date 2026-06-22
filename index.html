@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quem Sou Eu - Logística</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start-screen">
+  <h1>🚛 Quem Sou Eu? - Logística HARD</h1>
+
+  <input id="player" placeholder="Seu nome">
+  <button onclick="startGame()">Iniciar</button>
+
+  <h2>🏆 Ranking</h2>
+
+  <button class="danger" onclick="clearRanking()">🧹 Limpar histórico</button>
+
+  <ol id="ranking"></ol>
+</div>
+
+<div id="game" class="hidden">
+
+  <div id="hud">
+    ⏱ <span id="time">90</span>s |
+    ⭐ <span id="score">0</span> |
+    💡 Dicas: <span id="hints">3</span>
+  </div>
+
+  <div id="card">
+    <img id="img" class="img">
+    <h2>Quem sou eu?</h2>
+    <p id="clue"></p>
+  </div>
+
+  <input id="answer" placeholder="Digite sua resposta">
+
+  <div>
+    <button onclick="checkAnswer()">Responder</button>
+    <button onclick="nextClue()">Próxima pista</button>
+    <button onclick="useHint()">Dica</button>
+    <button class="skip" onclick="skipQuestion()">⏭ Pular</button>
+  </div>
+
+  <p id="feedback"></p>
+
+</div>
+
+<div id="end" class="hidden">
+  <h1>Fim de jogo!</h1>
+  <p id="final"></p>
+  <button onclick="location.reload()">Jogar novamente</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
